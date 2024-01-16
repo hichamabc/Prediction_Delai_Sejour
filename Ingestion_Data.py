@@ -49,6 +49,8 @@ class Ingestion_Data :
             B= A.merge(self.Aggregate_Data(column), on=column, how='inner')
             A=B
 
+        return A
+
 
             
 
