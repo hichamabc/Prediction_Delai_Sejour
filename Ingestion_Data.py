@@ -1,7 +1,5 @@
 import pandas as pd 
 from  datetime import datetime
-#'C:\Users\HAMCHTKOU\Documents\Prédiction_Délai_sejour\POC4\data.csv'
-#'C:\Users\HAMCHTKOU\Documents\Prédiction_Délai_sejour\POC4\délai_sejour_final.csv'
 
 class Ingestion_Data :
     def __init__(self,path_1, path_2):
@@ -28,7 +26,7 @@ class Ingestion_Data :
         
         A['Delai_Creation_DUM_BAD']=list(map(self.diff_date,A['DATE_VALIDATION_BAD'],A['DATE_CREATION_DUM'])) 
 
-        A=A.loc[:,['AVIS_ARRIVEE','NUM_BL','CODE_SH','LIEU_CHARGEMENT','CODE_LIEU_CHARGEMENT','PAYS_CHARGEMENT','PORT','TERMINAL','CODE_DOUANE','DATE_VALIDATION_BAD','Delai_Creation_DUM_BAD','Delai_pointage_BAD','DATE_CREATION_DUM','DATE_ML','DELAI_ML','ANNEE','MOIS','JOUR','DATE_POINTAGE','DELAI_SEJOUR']]
+        A=A.loc[:,['AVIS_ARRIVEE','NUM_BL','CODE_SH','LIEU_CHARGEMENT','CODE_LIEU_CHARGEMENT','PAYS_CHARGEMENT','TYPE_MR','PORT','TERMINAL','CODE_DOUANE','DATE_VALIDATION_BAD','Delai_Creation_DUM_BAD','Delai_pointage_BAD','DATE_CREATION_DUM','DATE_ML','DELAI_ML','ANNEE','MOIS','JOUR','DATE_POINTAGE','DELAI_SEJOUR']]
 
 
         return A
