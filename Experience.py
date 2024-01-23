@@ -1,6 +1,7 @@
 import pandas as pd
 import Model_Grid
 from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import mean_squared_error
 
 class Experience:
     def __init__( self, name,Model_Grid_List, X_train,y_train,X_test,y_test):
@@ -27,7 +28,7 @@ class Experience:
 
             L.append(l)
 
-            print(str(i)+'th grid search is finished')
+            print(str(i+1)+'th grid search is finished')
 
         score=999999
 
@@ -39,7 +40,7 @@ class Experience:
 
             model[0].fit(self.X_train,self.y_train)
 
-            print(str(i)+'th model search is trained')
+            print(str(i+1)+'th model is trained')
 
             model[0].predict(self.X_test)
 

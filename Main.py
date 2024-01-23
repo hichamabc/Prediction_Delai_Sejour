@@ -1,4 +1,4 @@
-from Ingestion_Data import Ingestion_Data
+from components import Ingestion_Data,TS_Transformation
 from Experience import Experience
 from Model_Grid import Model_Grid
 from catboost import CatBoostRegressor
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     D=Ingestion_Data(file1,file2)
 
     df=D.data(['CODE_SH','CODE_LIEU_CHARGEMENT','TERMINAL','CODE_DOUANE'])
-
+   '''
     train=df[(df['ANNEE']<2023) | ((df['ANNEE']==2023) & (df['MOIS']<10))]
 
     test=df[(df['ANNEE']>=2023) & (df['MOIS']>=10)]
@@ -62,6 +62,9 @@ if __name__ == "__main__":
 
     print(L[1])
 
-    
+   '''
+   print('hicham')
+
+   
 
 
